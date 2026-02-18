@@ -62,7 +62,7 @@ Start the stack using the helper script:
 ```bash
 ./manage.sh
 
-
+---
 
 ## License
 
