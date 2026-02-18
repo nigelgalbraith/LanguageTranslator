@@ -54,13 +54,13 @@ Nginx routes:
 - Docker Compose v2
 
 ---
-
 ## Run
 
 Start the stack using the helper script:
 
 ```bash
 ./manage.sh
+```
 
 ---
 
