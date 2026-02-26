@@ -1,0 +1,118 @@
+{
+  "es": {
+    "id": "es",
+    "title": "Spanish Translator",
+    "introKey": "spanish",
+    "backLinkLabel": "Back to Main Menu",
+    "lanes": [
+      {
+        "title": "English → Spanish",
+        "entry": {
+          "title": "English",
+          "textareaId": "english-text-es",
+          "placeholder": "Type English text here..."
+        },
+        "sourcePiper": {
+          "piperBase": "/api/piper/english/",
+          "voiceId": "en_US-amy-low"
+        },
+        "preview": {
+          "translateUrl": "/api/translate",
+          "targetId": "spanish-text-es",
+          "sourceLang": "en",
+          "targetLang": "es",
+          "title": "Spanish Translation",
+          "buttonLabel": "Translate",
+          "targetPlaceholder": "Translated Spanish will appear here…"
+        },
+        "targetPiper": {
+          "piperBase": "/api/piper/spanish/",
+          "voiceId": "es_AR-daniela-high"
+        }
+      },
+      {
+        "title": "Spanish → English",
+        "entry": {
+          "title": "Spanish",
+          "textareaId": "spanish-text-en",
+          "placeholder": "Type Spanish text here..."
+        },
+        "sourcePiper": {
+          "piperBase": "/api/piper/spanish/",
+          "voiceId": "es_AR-daniela-high"
+        },
+        "preview": {
+          "translateUrl": "/api/translate",
+          "targetId": "english-text-en",
+          "sourceLang": "es",
+          "targetLang": "en",
+          "title": "English Translation",
+          "buttonLabel": "Translate",
+          "targetPlaceholder": "Translated English will appear here…"
+        },
+        "targetPiper": {
+          "piperBase": "/api/piper/english/",
+          "voiceId": "en_US-amy-low"
+        }
+      }
+    ]
+  },
+  "zh": {
+    "id": "zh",
+    "title": "Chinese Translator",
+    "introKey": "chinese",
+    "backLinkLabel": "Back to Main Menu",
+    "lanes": [
+      {
+        "title": "English → Chinese",
+        "entry": {
+          "title": "English",
+          "textareaId": "english-text-zh",
+          "placeholder": "Type English text here..."
+        },
+        "sourcePiper": {
+          "piperBase": "/api/piper/english/",
+          "voiceId": "en_US-amy-low"
+        },
+        "preview": {
+          "translateUrl": "/api/translate",
+          "targetId": "chinese-text-zh",
+          "sourceLang": "en",
+          "targetLang": "zh",
+          "title": "Chinese Translation",
+          "buttonLabel": "Translate",
+          "targetPlaceholder": "Translated Chinese will appear here…"
+        },
+        "targetPiper": {
+          "piperBase": "/api/piper/chinese/",
+          "voiceId": "zh_CN-huayan-x_low"
+        }
+      },
+      {
+        "title": "Chinese → English",
+        "entry": {
+          "title": "Chinese",
+          "textareaId": "chinese-text-en",
+          "placeholder": "Type Chinese text here..."
+        },
+        "sourcePiper": {
+          "piperBase": "/api/piper/chinese/",
+          "voiceId": "zh_CN-huayan-x_low"
+        },
+        "preview": {
+          "translateUrl": "/api/translate",
+          "targetId": "english-text-en-zh",
+          "sourceLang": "zh",
+          "targetLang": "en",
+          "title": "English Translation",
+          "buttonLabel": "Translate",
+          "targetPlaceholder": "Translated English will appear here…"
+        },
+        "targetPiper": {
+          "piperBase": "/api/piper/english/",
+          "voiceId": "en_US-amy-low"
+        }
+      }
+    ]
+  }
+}

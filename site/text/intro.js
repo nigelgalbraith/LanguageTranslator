@@ -1,12 +1,10 @@
-// /text/intro.js
-
-window.INTRO_TEXT = {
+export const INTRO_TEXT = {
   home: `
     <p>
       Pick a translator to get started. Each one gives you quick, clear translations with built-in voice output.
     </p>
   `,
-  
+
   spanish: `
       <p>This tool translates English to Spanish and Spanish to English. You can type text, listen to it via Piper TTS, and instantly convert it between languages.</p>
 
@@ -29,5 +27,5 @@ window.INTRO_TEXT = {
       </ul>
 
       <p>Switch between translation directions using the toggle control.</p>
-  `
+  `,
 };

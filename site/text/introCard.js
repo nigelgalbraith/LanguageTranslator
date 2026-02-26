@@ -1,12 +1,11 @@
-// introcard.js
-const introCards = {
+export const introCards = {
   spanish: {
     title: "Spanish Translator",
     description: `
       Translate quickly between English and Spanish using
       natural-sounding Piper text-to-speech voices.
     `,
-    link: "spanish.html"
+    link: "translationPage.html?lang=es",
   },
 
   chinese: {
@@ -15,6 +14,6 @@ const introCards = {
       Translate between English and Chinese using
       natural-sounding Piper text-to-speech voices.
     `,
-    link: "chinese.html"
-  }
+    link: "translationPage.html?lang=zh",
+  },
 };
