@@ -90,19 +90,14 @@ function initPage() {
   const translatorGrid = document.createElement("div");
   translatorGrid.className = "translator-grid";
 
-  const spanishCard = buildIntroCardPane({
-    cardKey: "spanish",
-    cardsMap: introCards,
+  Object.keys(introCards).forEach((cardKey) => {
+    const cardPane = buildIntroCardPane({
+      cardKey,
+      cardsMap: introCards,
+    });
+    life.add(cardPane.destroy);
+    translatorGrid.appendChild(cardPane.node);
   });
-  const chineseCard = buildIntroCardPane({
-    cardKey: "chinese",
-    cardsMap: introCards,
-  });
-  life.add(spanishCard.destroy);
-  life.add(chineseCard.destroy);
-
-  translatorGrid.appendChild(spanishCard.node);
-  translatorGrid.appendChild(chineseCard.node);
 
   introHero.appendChild(intro.node);
   introHero.appendChild(translatorGrid);
