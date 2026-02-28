@@ -7,9 +7,10 @@ MENU='
 2) Stop containers
 3) Restart containers
 4) Rebuild containers
-5) Show status
-6) Show logs
-7) Exit
+5) Force recreate containers
+6) Show status
+7) Show logs
+8) Exit
 '
 
 # Return success if containers are running, fail if not
@@ -46,7 +47,7 @@ logs_docker() {
 # Rebuild containers (no cached layers)
 rebuild_docker() {
   echo "Stopping containers (if running)..."
-  docker compose down
+  docker compose down -v
 
   echo "Rebuilding images (no cache)..."
   docker compose build --no-cache
@@ -55,6 +56,13 @@ rebuild_docker() {
   docker compose up -d
 
   echo "Rebuild complete."
+}
+
+# Rebuild containers (no cached layers)
+force_recreate_docker() {
+  echo "Force recreating containers..."
+  docker compose up -d --force-recreate
+  echo "Containers recreated."
 }
 
 main() {
@@ -84,9 +92,10 @@ main() {
         start_docker
         ;;
       4) rebuild_docker ;;
-      5) status_docker ;;
-      6) logs_docker ;;
-      7) exit 0 ;;
+      5) force_recreate_docker ;;
+      6) status_docker ;;
+      7) logs_docker ;;
+      8) exit 0 ;;
       *) echo "Invalid option" ;;
     esac
 
