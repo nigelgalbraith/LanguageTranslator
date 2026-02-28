@@ -47,7 +47,7 @@ logs_docker() {
 # Rebuild containers (no cached layers)
 rebuild_docker() {
   echo "Stopping containers (if running)..."
-  docker compose down -v
+  docker compose down
 
   echo "Rebuilding images (no cache)..."
   docker compose build --no-cache
@@ -64,6 +64,7 @@ force_recreate_docker() {
   docker compose up -d --force-recreate
   echo "Containers recreated."
 }
+
 
 main() {
   while true; do
